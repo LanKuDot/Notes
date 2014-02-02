@@ -1,0 +1,30 @@
+>> arm-none-eabi-gcc compiler options
+> GCC command options: http://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html#Invoking-GCC
+
+-I<path>	include directories, 幫助compiler找到外部的library
+-fno-common	將未初始化的global variable放到object file的data section，而不是生成common blocks
+		如果在不同的編譯檔裡面有相同的變數名稱，在link他們時將會得到error
+-O0		編譯優化level0：不做任何優化
+-gdwarf-version	2, 3, or 4.提供DWARF格式的除錯資訊
+-g3		產生除錯資訊level3，支援檔案的macro defination
+[-m... : extended option for ARM architectures]
+-mcpu		指定ARM的processor
+-mthumb/-marm	產生在thumb state/ARM state中執行的code
+-c		compile but do not link
+================================================================
+>> arm-none-eabi-ld linker(?
+
+-T<script>	Use script as the linker script
+-nostartfiles	當作linking時，不要使用standard system startup files
+================================================================
+>> File extension
+*.elf		Executable and Linkable Format
+================================================================
+>> objcopy
+> https://sourceware.org/binutils/docs/binutils/objcopy.html
+objcopy -OBinrary <input> <output>
+		產生raw binrary file，可以成為輸入object file的memory dump file
+>> objdump
+> https://sourceware.org/binutils/docs/binutils/objcopy.html
+objdump -S <file>
+		檢視file的原始碼，包含disassembly的部份
