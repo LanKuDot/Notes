@@ -1,0 +1,7 @@
+>> Running options
+> http://dev.man-online.org/man1/qemu-system-arm/#lbAE
+-serial <dev>		將虛擬機的serial port導向host端的dev。初始值：無視窗模式為"stdio"，視窗模式為"vc"(Virtual Console)。
+-parallel <dev>		同上，但是導向的為parallel port
+-monitor <dev>		同serial，但是導向的為monitor
+-M <machine>		選擇模擬的機器
+-kernel <bzimage>	選擇kernel image
