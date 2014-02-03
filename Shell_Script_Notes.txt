@@ -16,6 +16,7 @@ esle
 fi
 		if-then-else
 
+<&0		&所接的數值為file number(fd)，而0就是stdin，1就是stdout，2為stderr。<或>為資料重新導向
 ============================================
 >>Command
 dirname <file>	回傳該檔案的路徑
