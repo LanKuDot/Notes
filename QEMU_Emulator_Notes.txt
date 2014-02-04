@@ -5,3 +5,5 @@
 -monitor <dev>		同serial，但是導向的為monitor
 -M <machine>		選擇模擬的機器
 -kernel <bzimage>	選擇kernel image
+-S			在啟動時不啟動CPU，必須按下'c'才會繼續
+-serial file:<path>	導向輸出到path指定的檔案
